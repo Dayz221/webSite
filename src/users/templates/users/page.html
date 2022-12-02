@@ -1,0 +1,29 @@
+{% extends 'users/layout.html' %}
+{% load static %}
+
+{% block title %}Вход и регистрация{% endblock %}
+
+{% block headers %}
+    <link rel="stylesheet" href="{% static 'users/css/page_auth.css' %}">
+    <link rel="stylesheet" href="{% static 'users/css/auth_forms.css' %}">
+{% endblock %}
+
+{% block content %}
+    <div class="app">
+        <div class="app__container">
+            <div class="menu">
+                <div class="button active" id="login_btn">Войти</div>
+                <div class="button" id="register_btn">Зарегистрироваться</div>
+            </div>
+            <div class="disable" id="register">
+                {% include 'users/register.html' %}
+            </div>
+            <div class="" id="login">
+                {% include 'users/login.html' %}
+            </div>
+        </div>
+    </div>
+
+    <script src="{% static 'users/js/page.js' %}"></script>
+    <script src="{% static 'users/js/network.js' %}"></script>
+{% endblock %}

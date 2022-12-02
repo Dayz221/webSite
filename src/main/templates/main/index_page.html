@@ -1,0 +1,66 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+
+{% block title %}Панель управления{% endblock %}
+
+{% block headers %}
+<link rel="stylesheet" href="{% static 'main/css/page.css' %}">
+<link rel="stylesheet" href="{% static 'main/css/widgets.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="app">
+    <div class="content">
+        <div id="main_page">
+            <div id="widget_prefabs" class="popup_menu disable">
+                <div class="prefabs__bar">
+                    <div class="prefabs__title">Виджеты</div>
+                    <div id="prefabs__exit" class="exit" onclick="exit_prefabs(this)"></div>
+                </div>
+                {% include 'main/widgets.html' %}
+            </div>
+            <div id="widgets"></div>
+            <div id="add_widget" onclick="add_widget_menu(this)">Добавить виджет</div>
+        </div>
+        <div id="boards_page" class="disable">
+            <div id="add_board_menu" class="popup_menu disable">
+                <div class="prefabs__bar">
+                    <div class="prefabs__title">Добавить плату</div>
+                    <div id="add_board_exit" class="exit" onclick="exit_add_board(this)"></div>
+                </div>
+                <input type="text" id="board_id" class="form__item" placeholder="ID платы">
+                <input type="text" id="board_password" class="form__item" placeholder="Пароль платы">
+                <div class="serv_response disable"></div>
+                <button id="submit_add_board" class="form__button form__item" onclick="add_board()">Добавить плату</button>
+            </div>
+            <!-- <div id="register_board_menu" class="popup_menu disable">
+                <div class="prefabs__bar">
+                    <div class="prefabs__title">Зарегестрировать плату</div>
+                    <div id="register_board_exit" class="exit" onclick="exit_register_board(this)"></div>
+                </div>
+                <input type="text" id="board_name" class="form__item" placeholder="Имя платы">
+                <input type="text" id="board_id" class="form__item" placeholder="ID платы">
+                <input type="text" id="board_password" class="form__item" placeholder="Пароль платы">
+                <button id="submit_register_board" class="form__button form__item" onclick="register_board()">Зарегестрировать плату</button>
+            </div> -->
+            <div class="disable">
+                <div class="board__prefab">
+                    <div class="board" id="" onclick="set_cur_board(this)">
+                        <div class="board__bar">
+                            <div class="board__name">Плата</div>
+                            <div class="delete_board" onclick="delete_board(this)">Удалить</div>
+                        </div>
+                        <div class="board__id">0000000000000001</div>
+                    </div>
+                </div>
+            </div>
+            <div id="boards"></div>
+            <div id="add_board" onclick="add_board_btn()">Добавить плату</div>
+            <!-- <div id="register_board" onclick="register_board_btn()">Зарегестрировать плату</div> -->
+        </div>
+    </div>
+</div>
+
+<script src="{% static 'main/js/page.js' %}"></script>
+<script src="{% static 'main/js/network.js' %}"></script>
+{% endblock %}

@@ -1,0 +1,73 @@
+.auth_form {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+
+.form__item {
+    box-sizing: content-box;
+    margin-top: 8px;
+    border-radius: 5px;
+    background-color: rgb(211, 211, 211);
+    padding: 8px 10px;
+    width: 85%;
+    outline: none;
+    border: 2px solid rgb(211, 211, 211);
+    transition: 0.2s;
+}
+
+.form__item:last-child {
+    margin-top: 16px;
+}
+
+.form__item[type='text']:focus,
+.form__item[type='password']:focus,
+.form__button:hover {
+    border-color: rgb(17, 165, 202);
+}
+
+.form__item[type='text'].error,
+.form__item[type='password'].error {
+    border-color: rgb(255, 78, 78);
+}
+
+.form__item.error_label {
+    background-color: rgb(224, 224, 224);
+    border-color: rgb(224, 224, 224);
+    margin: 0;
+    padding: 0 0 0 14px;
+    width: 250px;
+    border: 0;
+}
+
+.error_label {
+    font-size: 10px;
+    color: rgb(255, 78, 78);
+    word-wrap: break-word;
+}
+
+.serv_response {
+    color: white;
+    background-color: rgba(255, 78, 78, 0.9);
+    word-wrap: break-word;
+    width: 88%;
+    box-sizing: content-box;
+    padding: 8px;
+    border-radius: 5px;
+    font-size: 11px;
+    margin-top: 6px;
+    font-weight: normal;
+}
+
+.form__button {
+    font-weight: 500;
+    color: rgb(10, 10, 10);
+    transition: 0.2s;
+}
+
+.form__button:hover {
+    background-color: rgb(17, 165, 202);
+    color: rgb(236, 236, 236);
+    cursor: pointer;
+}

@@ -1,0 +1,12 @@
+Gmail:
+	Логин: smart.home.gimn@gmail.com
+	Пароль: qwedcvhu111
+
+PythonAnyWhere:
+	Логин: smartHomeGimn
+	Пароль: qwedcvhu111
+
+Site admin:
+	URL: http://site_url/admin/
+	Логин: admin
+	Пароль: qwedcvhu123

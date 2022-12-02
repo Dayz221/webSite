@@ -1,0 +1,110 @@
+<div class="widget_prefab button_prefab" onclick="add_widget(this)">
+    <div class="widget button" id = "">
+        <div class="widget__bar">
+            <div class="widget__title">Кнопка</div>
+            <div class="widget__settings_btn disable" onclick="widget_settings_btn(this)"></div>
+        </div>
+        <div class="widget__content">
+            <button class="widget__inner button" onmousedown="btn_down(this)" onmouseup="btn_up(this)" onclick="btn_click(this)">Кнопка</button>
+        </div>
+        <div class="widget_settings disable">
+            <div class="widget_option title">
+                <label for="title" class="option_title">Заголовок:</label>
+                <input type="text" name="title" class="option option__title" oninput="option_input(this)">
+            </div>
+            <div class="widget_option text">
+                <label for="text" class="option_title">Текст кнопки:</label>
+                <input type="text" name="text" class="option option_text" oninput="option_input(this)">
+            </div>
+            <div class="widget_option text_on">
+                <label for="text_on" class="option_title">Текст вкл.:</label>
+                <input type="text" name="text_on" class="option option_text_on" oninput="option_input(this)">
+            </div>
+            <div class="widget_option text_off">
+                <label for="text_off" class="option_title">Текст выкл.:</label>
+                <input type="text" name="text_off" class="option option_text_off" oninput="option_input(this)">
+            </div>
+            <div class="widget_option toggle">
+                <label for="toggle" class="option_title">Переключаемый:</label>
+                <input type="checkbox" name="toggle" class="option option_toggle" oninput="option_input(this)">
+            </div>
+            <div class="widget_option virtual">
+                <label for="virtual" class="option_title">Виртуальный порт:</label>
+                <input type="checkbox" name="virtual" class="option option_virtual" oninput="option_input(this)">
+            </div>
+            <div class="widget_option port">
+                <label for="port" class="option_title">Порт:</label>
+                <input type="number" name="port" class="option option_port" oninput="option_input(this)">
+            </div>
+
+            <div class="delete_widget" onclick="delete_widget(this)">Удалить</div>
+        </div>
+    </div>
+</div>
+
+<div class="widget_prefab slider_prefab" onclick="add_widget(this)">
+    <div class="widget slider" id = "">
+        <div class="widget__bar">
+            <div class="widget__title">Ползунок</div>
+            <div class="widget__settings_btn disable" onclick="widget_settings_btn(this)"></div>
+        </div>
+        <div class="widget__content">
+            <input type="range" class="widget__inner slider" oninput="slider_input(this)">
+            <output class="range_output disable">0</output>
+        </div>
+        <div class="widget_settings disable">
+            <div class="widget_option title">
+                <label for="title" class="option_title">Заголовок:</label>
+                <input type="text" name="title" class="option option__title" oninput="option_input(this)">
+            </div>
+            <div class="widget_option min">
+                <label for="minimum" class="option_title">Минимум:</label>
+                <input type="number" name="minimum" class="option option_min" oninput="option_input(this)">
+            </div>
+            <div class="widget_option max">
+                <label for="maximum" class="option_title">Максимум:</label>
+                <input type="number" name="maximum" class="option option_max" oninput="option_input(this)">
+            </div>
+            <div class="widget_option toggle">
+                <label for="visiable" class="option_title">Надпись:</label>
+                <input type="checkbox" name="visiable" class="option option_visiable" oninput="option_input(this)">
+            </div>
+            <div class="widget_option virtual">
+                <label for="virtual" class="option_title">Виртуальный порт:</label>
+                <input type="checkbox" name="virtual" class="option option_virtual" oninput="option_input(this)">
+            </div>
+            <div class="widget_option port">
+                <label for="port" class="option_title">Порт:</label>
+                <input type="number" name="port" class="option option_port" oninput="option_input(this)">
+            </div>
+            <div class="delete_widget" onclick="delete_widget(this)">Удалить</div>
+        </div>
+    </div>
+</div>
+
+<div class="widget_prefab output_prefab" onclick="add_widget(this)">
+    <div class="widget output" id = "">
+        <div class="widget__bar">
+            <div class="widget__title">Вывод</div>
+            <div class="widget__settings_btn disable" onclick="widget_settings_btn(this)"></div>
+        </div>
+        <div class="widget__content">
+            <div class="widget__inner output">Вывод</div>
+        </div>
+        <div class="widget_settings disable">
+            <div class="widget_option title">
+                <label for="title" class="option_title">Заголовок:</label>
+                <input type="text" name="title" class="option option__title" oninput="option_input(this)">
+            </div>
+            <div class="widget_option virtual">
+                <label for="virtual" class="option_title">Виртуальный порт:</label>
+                <input type="checkbox" name="virtual" class="option option_virtual" oninput="option_input(this)">
+            </div>
+            <div class="widget_option port">
+                <label for="port" class="option_title">Порт:</label>
+                <input type="number" name="port" class="option option_port" oninput="option_input(this)">
+            </div>
+            <div class="delete_widget" onclick="delete_widget(this)">Удалить</div>
+        </div>
+    </div>
+</div>

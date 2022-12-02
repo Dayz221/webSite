@@ -1,0 +1,55 @@
+.app {
+    display: flex;
+    justify-content: center;
+}
+
+.app__container {
+    width: 100%;
+    max-width: 260px;
+    margin-top: 20px;
+    padding: 20px 10px;
+    border-radius: 5px;
+    background-color: rgb(224, 224, 224);
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-evenly;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+}
+
+.button {
+    position: relative;
+    transition: 0.2s;
+}
+
+.button.active {
+    color: rgb(17,165,202);
+}
+
+.button::before {
+    opacity: 0;
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 100%;
+    height: 3px;
+    background-color: rgb(17,165,202);
+}
+
+.button.active::before {
+    opacity: 1;
+}
+
+.button:hover {
+    color: rgb(17,165,202);
+    cursor: pointer;
+}
+
+.disable {
+    display: none;
+}
